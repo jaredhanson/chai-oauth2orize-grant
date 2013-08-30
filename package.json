@@ -1,0 +1,52 @@
+{
+  "name": "chai-oauth2orize-grant",
+  "version": "0.1.0",
+  "description": "Helpers for testing OAuth2orize grants with the Chai assertion library.",
+  "keywords": [
+    "chai",
+    "oauth2orize",
+    "oauth",
+    "oauth2"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaredhanson/chai-oauth2orize-grant.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/chai-oauth2orize-grant/issues"
+  },
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "chai": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+  },
+  "testling": {
+    "browsers": [
+      "chrome/latest"
+    ],
+    "harness" : "mocha",
+    "files": [
+      "test/bootstrap/testling.js",
+      "test/*.test.js"
+    ]
+  }
+}
