@@ -3,9 +3,7 @@ var Test = require('../lib/test');
 describe('test grant that prepares transaction', function() {
   
   var grant = {};
-  grant.request = function(req) {
-    return { hello: req.query.hello };
-  }
+  grant.request = function(req) {}
   grant.response = function(txn, res, next) {
     res.end(txn.ext.hello);
   }
