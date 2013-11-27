@@ -1,6 +1,6 @@
 {
   "name": "chai-oauth2orize-grant",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Helpers for testing OAuth2orize grants with the Chai assertion library.",
   "keywords": [
     "chai",
