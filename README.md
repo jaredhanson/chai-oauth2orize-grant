@@ -1,8 +1,9 @@
 # chai-oauth2orize-grant
 
-[![Build](https://travis-ci.org/jaredhanson/chai-oauth2orize-grant.png)](http://travis-ci.org/jaredhanson/chai-oauth2orize-grant)
+[![Build](https://travis-ci.org/jaredhanson/chai-oauth2orize-grant.png)](https://travis-ci.org/jaredhanson/chai-oauth2orize-grant)
 [![Coverage](https://coveralls.io/repos/jaredhanson/chai-oauth2orize-grant/badge.png)](https://coveralls.io/r/jaredhanson/chai-oauth2orize-grant)
-[![Dependencies](https://david-dm.org/jaredhanson/chai-oauth2orize-grant.png)](http://david-dm.org/jaredhanson/chai-oauth2orize-grant)
+[![Quality](https://codeclimate.com/github/jaredhanson/chai-oauth2orize-grant.png)](https://codeclimate.com/github/jaredhanson/chai-oauth2orize-grant)
+[![Dependencies](https://david-dm.org/jaredhanson/chai-oauth2orize-grant.png)](https://david-dm.org/jaredhanson/chai-oauth2orize-grant)
 
 
 Helpers for testing [OAuth2orize](https://github.com/jaredhanson/oauth2orize)
