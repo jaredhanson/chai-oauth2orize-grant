@@ -1,12 +1,14 @@
+/* global describe, it, before, expect */
+
 var Test = require('../lib/test');
 
 describe('test grant that calls next', function() {
   
   var grant = {};
-  grant.request = function(req) {}
+  grant.request = function(req) {};
   grant.response = function(txn, res, next) {
-    next()
-  }
+    next();
+  };
   
   describe('with a next callback', function() {
     var err;
@@ -38,10 +40,10 @@ describe('test grant that calls next', function() {
 describe('test grant that calls next with error', function() {
   
   var grant = {};
-  grant.request = function(req) {}
+  grant.request = function(req) {};
   grant.response = function(txn, res, next) {
-    next(new Error('oops'))
-  }
+    next(new Error('oops'));
+  };
   
   describe('with a next callback', function() {
     var err;

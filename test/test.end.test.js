@@ -1,12 +1,14 @@
+/* global describe, it, before, expect */
+
 var Test = require('../lib/test');
 
 describe('test grant that calls end', function() {
   
   var grant = {};
-  grant.request = function(req) {}
+  grant.request = function(req) {};
   grant.response = function(txn, res, next) {
     res.end('Hello');
-  }
+  };
   
   describe('with an end callback', function() {
     var res;

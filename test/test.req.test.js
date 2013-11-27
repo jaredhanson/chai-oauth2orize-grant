@@ -1,3 +1,5 @@
+/* global describe, it, before, expect */
+
 var Test = require('../lib/test');
 
 describe('test grant that prepares request', function() {
@@ -5,8 +7,8 @@ describe('test grant that prepares request', function() {
   var grant = {};
   grant.request = function(req) {
     return { hello: req.query.hello };
-  }
-  grant.response = function(txn, res, next) {}
+  };
+  grant.response = function(txn, res, next) {};
   
   describe('sync', function() {
     

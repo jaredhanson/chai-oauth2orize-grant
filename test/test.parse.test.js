@@ -1,3 +1,5 @@
+/* global describe, it, before, expect */
+
 var Test = require('../lib/test');
 
 describe('test grant that calls parse', function() {
@@ -5,8 +7,8 @@ describe('test grant that calls parse', function() {
   var grant = {};
   grant.request = function(req) {
     return { foo: 'bar' };
-  }
-  grant.response = function(txn, res, next) {}
+  };
+  grant.response = function(txn, res, next) {};
   
   describe('with a parse callback', function() {
     var err, obj;
@@ -45,8 +47,8 @@ describe('test grant that calls async parse', function() {
   var grant = {};
   grant.request = function(req, done) {
     return done(null, { foo: 'bar' });
-  }
-  grant.response = function(txn, res, next) {}
+  };
+  grant.response = function(txn, res, next) {};
   
   describe('with a parse callback', function() {
     var err, obj;
@@ -76,8 +78,8 @@ describe('test grant that calls parse that throws an exception', function() {
   var grant = {};
   grant.request = function(req, done) {
     throw new Error('something was thrown');
-  }
-  grant.response = function(txn, res, next) {}
+  };
+  grant.response = function(txn, res, next) {};
   
   describe('with a parse callback', function() {
     var err, obj;
@@ -104,8 +106,8 @@ describe('test grant that calls async parse that encounters an error', function(
   var grant = {};
   grant.request = function(req, done) {
     return done(new Error('something went wrong'));
-  }
-  grant.response = function(txn, res, next) {}
+  };
+  grant.response = function(txn, res, next) {};
   
   describe('with a parse callback', function() {
     var err, obj;
