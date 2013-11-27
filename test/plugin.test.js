@@ -1,10 +1,10 @@
-var oauth2orizeGrant = require('..')
+var plugin = require('..')
   , Test = require('../lib/test');
 
 describe('helper', function() {
   
   var chai = {};
-  oauth2orizeGrant(chai);
+  plugin(chai);
   
   it('should add grant helper to chai', function() {
     expect(chai.grant).to.be.a('function');
