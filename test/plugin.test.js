@@ -7,11 +7,12 @@ describe('helper', function() {
   plugin(chai);
   
   it('should add grant helper to chai', function() {
-    expect(chai.grant).to.be.a('function');
+    expect(chai.oauth2orize).to.be.an('object');
+    expect(chai.oauth2orize.grant).to.be.a('function');
   });
   
   describe('when invoked', function() {
-    var test = chai.grant({});
+    var test = chai.oauth2orize.grant({});
     
     it('should return test wrapper', function() {
       expect(test).to.be.an.instanceOf(Test);

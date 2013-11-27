@@ -20,16 +20,15 @@ grants with the [Chai](http://chaijs.com/) assertion library.
 Use this plugin as you would all other Chai plugins:
 
 ```javascript
-var chai = require('chai')
-  , grant = require('chai-oauth2orize-grant');
+var chai = require('chai');
 
-chai.use(grant);
+chai.use(require('chai-oauth2orize-grant'));
 ```
 
 #### Write Test Cases
 
-Once used, the `chai.grant` helper function will be available to set up test
-cases for OAuth2orize grants.
+Once used, the `chai.oauth2orize.grant` helper function will be available to set
+up test cases for OAuth2orize grants.
 
 ## Tests
 
