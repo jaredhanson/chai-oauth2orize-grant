@@ -39,6 +39,60 @@ describe('test grant that calls end', function() {
 });
 
 
+describe('test grant that calls complete callback and then end', function() {
+  
+  var grant = {};
+  grant.request = function(req) {};
+  grant.response = function(txn, res, complete, next) {
+    complete(function() {
+      res.end('Hello');
+    });
+  };
+  
+  describe('with an complete callback', function() {
+    var res, completed;
+  
+    before(function(done) {
+      var test = new Test(grant);
+      test.end(function(r) {
+        res = r;
+        done();
+      }).decide(function(cb) {
+        completed = true;
+        cb();
+      });
+    });
+    
+    it('should call complete', function() {
+      expect(completed).to.be.true;
+    });
+  
+    it('should call end callback', function() {
+      expect(res.statusCode).to.be.equal(200);
+      expect(res.body).to.be.equal('Hello');
+    });
+  });
+  
+  describe('without an complete callback', function() {
+    var res, completed;
+  
+    before(function(done) {
+      var test = new Test(grant);
+      test.end(function(r) {
+        res = r;
+        done();
+      }).decide();
+    });
+  
+    it('should call end callback', function() {
+      expect(res.statusCode).to.be.equal(200);
+      expect(res.body).to.be.equal('Hello');
+    });
+  });
+  
+});
+
+
 describe('test grant that calls end after error', function() {
   
   var grant = {};
