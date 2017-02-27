@@ -2,7 +2,7 @@
 
 var Test = require('../lib/test');
 
-describe('test grant that prepares response', function() {
+describe('toreparing a response', function() {
   
   var grant = {};
   grant.request = function(req) {};
