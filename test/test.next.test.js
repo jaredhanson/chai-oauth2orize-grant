@@ -63,3 +63,67 @@ describe('test grant that calls next with error', function() {
   });
   
 });
+
+
+describe('test grant that calls next after error', function() {
+  
+  var grant = {};
+  grant.request = function(req) {};
+  grant.error = function(err, txn, res, next) {
+    next(err);
+  };
+  
+  describe('with a next callback', function() {
+    var err;
+  
+    before(function(done) {
+      var test = new Test(grant);
+      test.next(function(e) {
+        err = e;
+        done();
+      }).error(new Error('Danger, Will Robinson!'));
+    });
+  
+    it('should call next callback', function() {
+      expect(err).to.be.an.instanceOf(Error);
+      expect(err.message).to.equal('Danger, Will Robinson!');
+    });
+  });
+  
+  describe('without a next callback', function() {
+    it('should throw an error', function() {
+      expect(function() {
+        var test = new Test(grant);
+        test.error(new Error('Danger, Will Robinson!'));
+      }).to.throw(Error, 'next should not be called');
+    });
+  });
+  
+});
+
+describe('test grant that calls next with error after error', function() {
+  
+  var grant = {};
+  grant.request = function(req) {};
+  grant.error = function(err, txn, res, next) {
+    next(err);
+  };
+  
+  describe('with a next callback', function() {
+    var err;
+  
+    before(function(done) {
+      var test = new Test(grant);
+      test.next(function(e) {
+        err = e;
+        done();
+      }).error(new Error('Danger, Will Robinson!'));
+    });
+  
+    it('should call next callback', function() {
+      expect(err).to.be.an.instanceOf(Error);
+      expect(err.message).to.equal('Danger, Will Robinson!');
+    });
+  });
+  
+});
