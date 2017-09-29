@@ -31,21 +31,12 @@ chai.use(require('chai-oauth2orize-grant'));
 Once used, the `chai.oauth2orize.grant` helper function will be available to set
 up test cases for OAuth2orize grants.
 
-## Support
-
-#### Funding
-
-This software is provided to you as open source, free of charge.  The time and
-effort to develop and maintain this project is volunteered by [@jaredhanson](https://github.com/jaredhanson).
-If you (or your employer) benefit from this project, please consider a financial
-contribution.  Your contribution helps continue the efforts that produce this
-and other open source software.
-
-Funds are accepted via [PayPal](https://paypal.me/jaredhanson), [Venmo](https://venmo.com/jaredhanson),
-and [other](http://jaredhanson.net/pay) methods.  Any amount is appreciated.
-
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2013-2017 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/vK9dyjRnnWsMzzJTQ57fRJpH/jaredhanson/chai-oauth2orize-grant'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/vK9dyjRnnWsMzzJTQ57fRJpH/jaredhanson/chai-oauth2orize-grant.svg' />
+</a>
