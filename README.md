@@ -1,8 +1,9 @@
 # chai-oauth2orize-grant
 
+[![Version](https://img.shields.io/npm/v/chai-oauth2orize-grant.svg?label=version)](https://www.npmjs.com/package/chai-oauth2orize-grant)
 [![Build](https://img.shields.io/travis/jaredhanson/chai-oauth2orize-grant.svg)](https://travis-ci.org/jaredhanson/chai-oauth2orize-grant)
-[![Coverage](https://img.shields.io/coveralls/jaredhanson/chai-oauth2orize-grant.svg)](https://coveralls.io/r/jaredhanson/chai-oauth2orize-grant)
 [![Quality](https://img.shields.io/codeclimate/github/jaredhanson/chai-oauth2orize-grant.svg?label=quality)](https://codeclimate.com/github/jaredhanson/chai-oauth2orize-grant)
+[![Coverage](https://img.shields.io/coveralls/jaredhanson/chai-oauth2orize-grant.svg)](https://coveralls.io/r/jaredhanson/chai-oauth2orize-grant)
 [![Dependencies](https://img.shields.io/david/jaredhanson/chai-oauth2orize-grant.svg)](https://david-dm.org/jaredhanson/chai-oauth2orize-grant)
 
 
